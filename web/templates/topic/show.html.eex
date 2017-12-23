@@ -1,0 +1,18 @@
+<h5> <%= @topic.title %> </h5>
+
+<%= if @conn.assigns.user do %>
+<div class="input-filed">
+    <textarea class="materialize-textarea"></textarea>
+    <button class="btn">Add Comment</button>
+</div>
+<% end %>
+
+<ul class="collection">
+
+</ul>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        window.createSocket(<%= @topic.id %>)
+    });
+</script>
